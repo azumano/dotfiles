@@ -19,6 +19,9 @@ set nobackup					" バックアップなし
 set visualbell t_vb=			" ビープ音なし
 set noswapfile					" スワップファイル作らない
 
+" 勝手に改行しない
+set formatoptions=q
+
 " 自動インデント時にタブが2つ付くのを防ぐ
 set softtabstop=4
 set shiftwidth=4
