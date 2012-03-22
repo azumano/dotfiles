@@ -59,3 +59,23 @@ let Tlist_Auto_Open=1
 " 改行時に自動でコメントが挿入されるのをやめる
 autocmd FileType * setlocal formatoptions-=ro
 
+set antialias        " アンチエイリアス
+set number           " 行番号表示
+set ruler            " ルーラー表示
+
+" カラースキーマ
+colorscheme desert
+"colorscheme zenburn
+"colorscheme molokai
+"colorscheme wombat
+" highlight LineNr ctermfg=darkgrey guifg=#999999
+highlight SpecialKey term=underline ctermfg=darkgray guifg=#666666
+
+" ステータスラインの色
+highlight statusline term=NONE cterm=NONE guifg=#333333 guibg=#cccccc
+
+" 日本語入力ON時のカーソルの色を設定
+if has('multi_byte_ime') || has('xim')
+highlight CursorIM guibg=#cc0000 guifg=NONE
+endif
+
