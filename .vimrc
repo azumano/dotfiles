@@ -18,10 +18,17 @@ set statusline=%F%m%r%h%w\ FORMAT=%{&ff}\ TYPE=%Y\ ASCII=\%03.3b\ HEX=\%02.2B\ P
 " コマンドをステータスラインに表示
 set showcmd
 
-set tabstop=4					" タブサイズ
-set nobackup					" バックアップなし
-set visualbell t_vb=			" ビープ音なし
-set noswapfile					" スワップファイル作らない
+" タブサイズ
+set tabstop=4
+
+" バックアップなし
+set nobackup
+
+" ビープ音なし
+set visualbell t_vb=
+
+" スワップファイル作らない
+set noswapfile
 
 " 勝手に改行しない
 set formatoptions=q
@@ -62,20 +69,4 @@ autocmd FileType * setlocal formatoptions-=ro
 set antialias        " アンチエイリアス
 set number           " 行番号表示
 set ruler            " ルーラー表示
-
-" カラースキーマ
-colorscheme desert
-"colorscheme zenburn
-"colorscheme molokai
-"colorscheme wombat
-" highlight LineNr ctermfg=darkgrey guifg=#999999
-highlight SpecialKey term=underline ctermfg=darkgray guifg=#666666
-
-" ステータスラインの色
-highlight statusline term=NONE cterm=NONE guifg=#333333 guibg=#cccccc
-
-" 日本語入力ON時のカーソルの色を設定
-if has('multi_byte_ime') || has('xim')
-highlight CursorIM guibg=#cc0000 guifg=NONE
-endif
 
