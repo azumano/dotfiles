@@ -11,7 +11,11 @@ set tags=$HOME/tags
 " 検索をファイルの先頭へループしない
 set nowrapscan
 
-" コマンドをステータス行に表示
+" ステータスラインに表示する情報の指定
+set laststatus=2
+set statusline=%F%m%r%h%w\ FORMAT=%{&ff}\ TYPE=%Y\ ASCII=\%03.3b\ HEX=\%02.2B\ POS=%04l,%04v[%p%%]\ LEN=%L
+
+" コマンドをステータスラインに表示
 set showcmd
 
 set tabstop=4					" タブサイズ

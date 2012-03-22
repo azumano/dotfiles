@@ -19,10 +19,13 @@ if has('gui_macvim')
   " highlight LineNr ctermfg=darkgrey guifg=#999999
   highlight SpecialKey term=underline ctermfg=darkgray guifg=#666666
 
-  " ステータスラインに表示する情報の指定
-  set statusline=%n\:%y%F\ \|%{(&fenc!=''?&fenc:&enc).'\|'.&ff.'\|'}%m%r%=
   " ステータスラインの色
-  "highlight statusline term=NONE cterm=NONE guifg=#333333 guibg=#cccccc
+  highlight statusline term=NONE cterm=NONE guifg=#333333 guibg=#cccccc
+
+  " 日本語入力ON時のカーソルの色を設定
+  if has('multi_byte_ime') || has('xim')
+    highlight CursorIM guibg=#cc0000 guifg=NONE
+  endif
 
   " ウィンドウサイズ
   set columns=150      " 横幅
