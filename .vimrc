@@ -21,6 +21,9 @@ set showcmd
 " タブサイズ
 set tabstop=4
 
+" カーソルの上または下に表示する最小限の行数
+set scrolloff=5
+
 " バックアップなし
 set nobackup
 
@@ -47,6 +50,10 @@ nnoremap k gk
 nnoremap <Down> gj
 nnoremap <Up>   gk
 
+" インサートモードの場合は、一旦ノーマルモードに移ってから移動する
+inoremap <DOWN> <C-c>gja
+inoremap <UP> <C-c>gka
+
 " BSでインデントや改行を削除できるようにする
 set backspace=indent,eol,start
 
@@ -62,6 +69,9 @@ set listchars=tab:^\ ,trail:~
 
 " taglist.vim
 let Tlist_Auto_Open=1
+let Tlist_Show_One_File = 1                                      " 現在編集中のソースのタグしか表示しない
+let Tlist_Exit_OnlyWiindow = 1                                   " taglist が最後のウインドウなら vim を閉じる
+let g:tlist_php_settings = 'php;c:class;d:constant;f:function'   " 表示内容
 
 " 改行時に自動でコメントが挿入されるのをやめる
 autocmd FileType * setlocal formatoptions-=ro
@@ -69,4 +79,5 @@ autocmd FileType * setlocal formatoptions-=ro
 set antialias        " アンチエイリアス
 set number           " 行番号表示
 set ruler            " ルーラー表示
+set cursorline       " カーソル行を色分け
 
