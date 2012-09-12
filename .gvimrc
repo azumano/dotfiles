@@ -26,7 +26,7 @@ highlight CursorLine ctermbg=Black guibg=#222222
 " ステータスラインの色
 highlight statusline term=NONE cterm=NONE guifg=#333333 guibg=#cccccc
 
-" 日本語入力ON時のカーソルの色を設定
+" 日本語入力ON時のカーソルの色
 if has('multi_byte_ime') || has('xim')
   highlight CursorIM guibg=#cc0000 guifg=NONE
 endif

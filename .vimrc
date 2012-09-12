@@ -30,6 +30,9 @@ set nobackup
 " ビープ音なし
 set visualbell t_vb=
 
+" 起動画面なし
+set shortmess+=I
+
 " スワップファイル作らない
 set noswapfile
 
@@ -51,17 +54,14 @@ nnoremap <Down> gj
 nnoremap <Up>   gk
 
 " インサートモードの場合は、一旦ノーマルモードに移ってから移動する
-inoremap <DOWN> <C-c>gja
-inoremap <UP> <C-c>gka
+"inoremap <DOWN> <C-c>gja
+"inoremap <UP> <C-c>gka
 
 " BSでインデントや改行を削除できるようにする
 set backspace=indent,eol,start
 
 " カーソルを行頭、行末で止まらないようにする
 set whichwrap=b,s,h,l,<,>,[,]
-
-" 起動画面なし
-set shortmess+=I
 
 " Tab、行末の半角スペースを表示する
 set list
