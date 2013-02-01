@@ -81,3 +81,6 @@ set number           " 行番号表示
 set ruler            " ルーラー表示
 set cursorline       " カーソル行を色分け
 
+" ToDoファイル
+command! Todo edit ~/Dropbox/Memo/todo.txt
+
